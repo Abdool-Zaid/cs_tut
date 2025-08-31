@@ -1,7 +1,1 @@
-﻿byte num = 255;
-num++;
-// checked // throws exception when overflow
-// {
-// num++;
-// }
-Console.WriteLine(num);
+﻿Console.WriteLine("{0}, {1}", double.MinValue, double.MaxValue);
