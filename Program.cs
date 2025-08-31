@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("test 1234");
+﻿byte num = 255;
+num++;
+Console.WriteLine(num);
