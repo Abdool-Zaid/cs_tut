@@ -4,18 +4,20 @@
 
         static void Main(string[] args)
         {
-            byte user_num;
-            System.Console.WriteLine("please enter a number between 1 to 10\n");
-            user_num = Convert.ToByte(System.Console.ReadLine());
+            byte user_num_1;
+            byte user_num_2;
+            System.Console.WriteLine("please enter the first number\n");
+            user_num_1 = Convert.ToByte(System.Console.ReadLine());
+            System.Console.WriteLine("please enter the second number\n");
+            user_num_2 = Convert.ToByte(System.Console.ReadLine());
 
-            if (user_num >0 && user_num <=10)
+            if (user_num_1 > user_num_2)
             {
-                System.Console.WriteLine("number is valid");
+                System.Console.WriteLine("largest number is {0}", user_num_1);
             }
             else
             {
-                System.Console.WriteLine("number is invalid");
-                
+                System.Console.WriteLine("largest number is {0}", user_num_2);
             }
         }
     }
