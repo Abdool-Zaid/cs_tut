@@ -4,14 +4,24 @@
 
         static void Main(string[] args)
         {
-            String name;
-            System.Console.WriteLine("please enter a name");
-            name = System.Console.ReadLine();
-            char[] charArray = name.ToCharArray();
-            Array.Reverse(charArray);
-            var rev_name = new String(charArray);
 
-            System.Console.WriteLine(rev_name);
+           int[] numlist = new int[5] { 0,0,0,0,0};
+            for (int i = 0; i < 5; i++)
+            {
+                int temp;
+                System.Console.WriteLine("enter a number: ");
+                temp = Convert.ToInt32(System.Console.ReadLine());
+                while (numlist.Contains(temp))
+                {
+                    System.Console.WriteLine("please try a different number");
+                    temp = Convert.ToInt32(System.Console.ReadLine());
+                }
+                numlist[i] = temp;
+            }
+            foreach (var item in numlist)
+            {
+                System.Console.WriteLine(item);
+            }
 
         }
     }
