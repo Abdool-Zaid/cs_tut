@@ -4,23 +4,15 @@
 
         static void Main(string[] args)
         {
-            int user_num = 0;
-            while (true)
-            {
-                System.Console.Write("ener a number: ");
-                var temp = System.Console.ReadLine();
-                if (temp == "ok")
-                {
-                    break;
-                }
-                else
-                {
-                    user_num += Convert.ToInt32(temp);
-                    
-                    System.Console.WriteLine("total : {0}", user_num);
-
-                }
+            int user_num;
+            int res = 1;
+            System.Console.Write("enter a number: ");
+            user_num = Convert.ToInt32(System.Console.ReadLine());
+            for (int i = user_num; i > 0; i--)
+            {   
+                res *= i;
             }
+            System.Console.WriteLine("{0}! = {1}", user_num,res);
         }
     }
     
