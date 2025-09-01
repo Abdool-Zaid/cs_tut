@@ -4,24 +4,35 @@
 
         static void Main(string[] args)
         {
-            var rand = new Random();
-            byte total_guesses = 4;
-            byte secret_num = (byte)rand.Next(1, 10);
-
-            Console.WriteLine("guess a number between 1 and 10");
-            for (int i = 0; i < total_guesses; i++)
+            var liked_by = new List<string>();
+            while (true)
             {
-                if (Convert.ToByte(System.Console.ReadLine()) == secret_num)
+                System.Console.WriteLine("enter a name");
+                var name = System.Console.ReadLine();
+                if (String.IsNullOrWhiteSpace(name))
                 {
-                    System.Console.WriteLine("you guessed correctly");
                     break;
                 }
                 else
                 {
-                    System.Console.WriteLine("try again");
+                    liked_by.Add(name);
+                    if (liked_by.Count == 1)
+                    {
+                        System.Console.WriteLine("{0} liked your post", name);
+                    }
+                    else if (liked_by.Count == 2)
+                    {
+                        System.Console.WriteLine("your post was liked by {0} and {1}", liked_by[0], liked_by[1]);
+                    }
+                    else if (liked_by.Count > 2)
+                    {
+                        System.Console.WriteLine("your post was liked by {0},{1} and {2} more ", liked_by[0], liked_by[1], (liked_by.Count-2));
+                    }
+
+
                 }
+
             }
-            System.Console.WriteLine("answer was {0}", secret_num);
 
         }
     }
