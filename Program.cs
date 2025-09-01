@@ -4,20 +4,20 @@
 
         static void Main(string[] args)
         {
-            byte user_num_1;
-            byte user_num_2;
-            System.Console.WriteLine("please enter the first number\n");
-            user_num_1 = Convert.ToByte(System.Console.ReadLine());
-            System.Console.WriteLine("please enter the second number\n");
-            user_num_2 = Convert.ToByte(System.Console.ReadLine());
+            byte image_width;
+            byte image_height;
+            System.Console.WriteLine("please enter the image's width\n");
+            image_width = Convert.ToByte(System.Console.ReadLine());
+            System.Console.WriteLine("please enter the image's height\n");
+            image_height = Convert.ToByte(System.Console.ReadLine());
 
-            if (user_num_1 > user_num_2)
+            if (image_width > image_height)
             {
-                System.Console.WriteLine("largest number is {0}", user_num_1);
+                System.Console.WriteLine("image is landscape");
             }
             else
             {
-                System.Console.WriteLine("largest number is {0}", user_num_2);
+                System.Console.WriteLine("image is portrait");
             }
         }
     }
