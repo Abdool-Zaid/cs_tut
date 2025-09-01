@@ -4,13 +4,19 @@
 
         static void Main(string[] args)
         {
-            Calculator calc = new Calculator();
+            byte user_num;
+            System.Console.WriteLine("please enter a number between 1 to 10\n");
+            user_num = Convert.ToByte(System.Console.ReadLine());
 
-                System.Console.WriteLine(calc.add(9,10));
-                System.Console.WriteLine(calc.subtract(9,10));
-                System.Console.WriteLine(calc.mul(9,10));
-                System.Console.WriteLine(calc.div(9,10));
-
+            if (user_num >0 && user_num <=10)
+            {
+                System.Console.WriteLine("number is valid");
+            }
+            else
+            {
+                System.Console.WriteLine("number is invalid");
+                
+            }
         }
     }
     
