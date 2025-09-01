@@ -4,11 +4,21 @@
 
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 100; i++)
+            int user_num = 0;
+            while (true)
             {
-                if (i % 3 == 0)
+                System.Console.Write("ener a number: ");
+                var temp = System.Console.ReadLine();
+                if (temp == "ok")
                 {
-                    System.Console.WriteLine("{0} is divisible by 3", i);
+                    break;
+                }
+                else
+                {
+                    user_num += Convert.ToInt32(temp);
+                    
+                    System.Console.WriteLine("total : {0}", user_num);
+
                 }
             }
         }
