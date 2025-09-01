@@ -4,15 +4,25 @@
 
         static void Main(string[] args)
         {
-            int user_num;
-            int res = 1;
-            System.Console.Write("enter a number: ");
-            user_num = Convert.ToInt32(System.Console.ReadLine());
-            for (int i = user_num; i > 0; i--)
-            {   
-                res *= i;
+            var rand = new Random();
+            byte total_guesses = 4;
+            byte secret_num = (byte)rand.Next(1, 10);
+
+            Console.WriteLine("guess a number between 1 and 10");
+            for (int i = 0; i < total_guesses; i++)
+            {
+                if (Convert.ToByte(System.Console.ReadLine()) == secret_num)
+                {
+                    System.Console.WriteLine("you guessed correctly");
+                    break;
+                }
+                else
+                {
+                    System.Console.WriteLine("try again");
+                }
             }
-            System.Console.WriteLine("{0}! = {1}", user_num,res);
+            System.Console.WriteLine("answer was {0}", secret_num);
+
         }
     }
     
